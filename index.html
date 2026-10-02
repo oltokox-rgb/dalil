@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Site Web</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+<header class="header">
+
+  <div class="container nav">
+
+    <a href="#home" class="brand" id="brandLink">
+      <img id="brandLogo" class="brand-logo hidden" alt="">
+      <span id="brandText">SITE WEB</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#home">الرئيسية</a>
+      <a href="#about">من أنا</a>
+      <a href="#services">الخدمات</a>
+      <a href="#projects">المشاريع</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+
+    <div class="nav-actions">
+
+      <a
+        id="headerWhatsapp"
+        href="#"
+        class="whatsapp"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp
+      </a>
+
+      <a href="admin.html" class="admin-link">
+        🔐 الإدارة
+      </a>
+
+      <button class="order-btn order-open">
+        اطلب موقعك
+      </button>
+
+    </div>
+
+    <button id="menuBtn" class="menu-btn">
+      ☰
+    </button>
+
+  </div>
+
+  <div id="mobileMenu" class="mobile-menu">
+
+    <a href="#home">الرئيسية</a>
+    <a href="#about">من أنا</a>
+    <a href="#services">الخدمات</a>
+    <a href="#projects">المشاريع</a>
+    <a href="#contact">تواصل</a>
+
+    <a
+      id="mobileWhatsapp"
+      href="#"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      WhatsApp
+    </a>
+
+    <a href="admin.html">
+      🔐 الإدارة
+    </a>
+
+    <button class="order-open">
+      اطلب موقعك
+    </button>
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <section id="home" class="hero">
+
+    <div class="hero-glow glow-a"></div>
+    <div class="hero-glow glow-b"></div>
+
+    <div class="container hero-grid">
+
+      <div class="hero-copy">
+
+        <span class="eyebrow">
+          WEB DEVELOPMENT
+        </span>
+
+        <h1 id="heroTitle">
+          نبني لك موقعك باحتراف
+        </h1>
+
+        <p id="heroDescription">
+          مواقع ويب احترافية وسريعة ومتجاوبة مع الهاتف والكمبيوتر.
+        </p>
+
+        <div class="hero-actions">
+
+          <button class="btn primary order-open">
+            اطلب موقعك الآن
+            <span>↗</span>
+          </button>
+
+          <a
+            id="heroWhatsapp"
+            href="#"
+            class="btn secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            تواصل عبر WhatsApp
+          </a>
+
+        </div>
+
+        <div class="mini-stats">
+
+          <div>
+            <strong>01</strong>
+            <span>تصميم احترافي</span>
+          </div>
+
+          <div>
+            <strong>02</strong>
+            <span>متجاوب</span>
+          </div>
+
+          <div>
+            <strong>03</strong>
+            <span>رابط خاص</span>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-preview">
+
+        <div class="preview-window">
+
+          <div class="preview-top">
+
+            <div class="preview-dots">
+              <i></i>
+              <i></i>
+              <i></i>
+            </div>
+
+            <div class="preview-url">
+              yourwebsite.com
+            </div>
+
+          </div>
+
+          <div class="preview-body">
+
+            <div class="preview-badge"></div>
+
+            <div class="preview-heading">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="preview-grid">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+
+            <div class="preview-button"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="about" class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="eyebrow">ABOUT</span>
+
+        <h2 id="aboutTitle">
+          من أنا
+        </h2>
+
+      </div>
+
+
+      <div class="about-grid">
+
+        <div class="profile-wrap">
+
+          <div class="profile-glow"></div>
+
+          <img
+            id="profileImage"
+            class="profile-image"
+            alt="Profile"
+          >
+
+        </div>
+
+
+        <div class="about-copy">
+
+          <h3 id="aboutName">
+            Djalil
+          </h3>
+
+          <p id="aboutText">
+            مطور مواقع ويب أعمل على إنشاء مواقع عصرية وسريعة.
+          </p>
+
+
+          <div class="contact-mini">
+
+            <div>
+              <span>WhatsApp</span>
+              <strong id="aboutWhatsapp">
+                0782106656
+              </strong>
+            </div>
+
+            <div>
+              <span>Email</span>
+              <strong id="aboutEmail">
+                ardjoundjalil8@gmail.com
+              </strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="services" class="section">
+
+    <div class="container">
+
+      <div class="section-title center">
+
+        <span class="eyebrow">SERVICES</span>
+
+        <h2>الخدمات</h2>
+
+        <p>
+          خدمات رقمية قابلة للتخصيص حسب مشروعك.
+        </p>
+
+      </div>
+
+
+      <div id="servicesGrid" class="services-grid">
+        <div class="loading">
+          جاري التحميل...
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="projects" class="section dark-section">
+
+    <div class="container">
+
+      <div class="section-title center">
+
+        <span class="eyebrow">PORTFOLIO</span>
+
+        <h2>المشاريع</h2>
+
+        <p>
+          نماذج من الأعمال والمواقع.
+        </p>
+
+      </div>
+
+
+      <div id="projectsGrid" class="projects-grid">
+        <div class="loading">
+          جاري التحميل...
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="cta-section">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <div>
+
+          <span class="eyebrow">
+            START PROJECT
+          </span>
+
+          <h2>
+            عندك فكرة لموقع؟
+          </h2>
+
+          <p>
+            أرسل التفاصيل وسأشوف معك أفضل طريقة لتنفيذها.
+          </p>
+
+        </div>
+
+        <button class="btn primary order-open">
+          ابدأ الآن
+          <span>↗</span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="contact" class="section">
+
+    <div class="container">
+
+      <div class="section-title center">
+
+        <span class="eyebrow">CONTACT</span>
+
+        <h2>تواصل معي</h2>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+
+          <div class="contact-line">
+            <div>📱</div>
+
+            <div>
+              <span>WhatsApp</span>
+
+              <a
+                id="contactWhatsapp"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                0782106656
+              </a>
+            </div>
+          </div>
+
+
+          <div class="contact-line">
+            <div>✉️</div>
+
+            <div>
+              <span>Email</span>
+
+              <a id="contactEmail" href="#">
+                ardjoundjalil8@gmail.com
+              </a>
+            </div>
+          </div>
+
+
+          <div class="contact-line">
+            <div>📸</div>
+
+            <div>
+              <span>Instagram</span>
+
+              <a
+                id="contactInstagram"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+
+        <form id="contactForm" class="contact-form">
+
+          <div class="form-row">
+
+            <div class="field">
+              <label>الاسم</label>
+              <input id="clientName" required>
+            </div>
+
+            <div class="field">
+              <label>رقم الهاتف</label>
+              <input id="clientPhone" type="tel" required>
+            </div>
+
+          </div>
+
+
+          <div class="field">
+            <label>Email</label>
+            <input id="clientEmail" type="email">
+          </div>
+
+
+          <div class="field">
+            <label>الرسالة</label>
+
+            <textarea
+              id="clientMessage"
+              rows="6"
+              required
+            ></textarea>
+          </div>
+
+
+          <button
+            id="contactSubmit"
+            class="btn primary full"
+            type="submit"
+          >
+            إرسال الرسالة
+          </button>
+
+
+          <div id="contactResult" class="result"></div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="footer">
+
+  <div class="container footer-inner">
+
+    <div>
+      <strong id="footerName">
+        SITE WEB
+      </strong>
+
+      <p>
+        © <span id="year"></span>
+        جميع الحقوق محفوظة.
+      </p>
+    </div>
+
+    <button class="order-open footer-order">
+      اطلب موقعك
+    </button>
+
+  </div>
+
+</footer>
+
+
+<!-- ORDER MODAL -->
+
+<div id="orderModal" class="modal hidden">
+
+  <div class="modal-box order-modal">
+
+    <button id="closeOrderModal" class="modal-close">
+      ×
+    </button>
+
+
+    <div class="modal-head">
+
+      <span class="eyebrow">
+        START YOUR PROJECT
+      </span>
+
+      <h2>
+        اطلب موقعك
+      </h2>
+
+      <p>
+        كل المعلومات التي ترسلها ستظهر عندي مباشرة في لوحة الإدارة.
+      </p>
+
+    </div>
+
+
+    <form id="orderForm">
+
+      <div class="order-section">
+
+        <h3>معلوماتك</h3>
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label>الاسم الكامل *</label>
+            <input id="orderName" required>
+          </div>
+
+          <div class="field">
+            <label>رقم الهاتف *</label>
+            <input id="orderPhone" type="tel" required>
+          </div>
+
+          <div class="field full">
+            <label>Email</label>
+            <input id="orderEmail" type="email">
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="order-section">
+
+        <h3>معلومات المشروع</h3>
+
+        <div class="form-grid">
+
+          <div class="field">
+            <label>اسم المشروع</label>
+            <input id="orderBusiness">
+          </div>
+
+          <div class="field">
+            <label>نوع النشاط</label>
+            <input
+              id="orderBusinessType"
+              placeholder="ملابس، مطعم، خدمات..."
+            >
+          </div>
+
+          <div class="field full">
+            <label>نوع الموقع</label>
+
+            <select id="orderWebsiteType">
+              <option value="">اختر</option>
+              <option value="Landing Page">Landing Page</option>
+              <option value="Site vitrine">Site vitrine</option>
+              <option value="Portfolio">Portfolio</option>
+              <option value="E-commerce">متجر إلكتروني</option>
+              <option value="Custom">موقع مخصص</option>
+            </select>
+
+          </div>
+
+          <div class="field full">
+
+            <label>فكرة الموقع *</label>
+
+            <textarea
+              id="orderIdea"
+              rows="7"
+              required
+              placeholder="اشرح فكرتك بالتفصيل..."
+            ></textarea>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="order-section">
+
+        <h3>تفاصيل الموقع</h3>
+
+        <div class="form-grid">
+
+          <div class="field full">
+            <label>الصفحات المطلوبة</label>
+
+            <input
+              id="orderPages"
+              placeholder="الرئيسية، المنتجات، من نحن..."
+            >
+          </div>
+
+
+          <div class="field full">
+
+            <label>المزايا المطلوبة</label>
+
+            <textarea
+              id="orderFeatures"
+              rows="5"
+              placeholder="WhatsApp، Admin، طلبات، منتجات..."
+            ></textarea>
+
+          </div>
+
+
+          <div class="field">
+            <label>الميزانية</label>
+
+            <select id="orderBudget">
+
+              <option value="">اختر</option>
+
+              <option value="أقل من 5000 DA">
+                أقل من 5000 DA
+              </option>
+
+              <option value="5000 - 10000 DA">
+                5000 - 10000 DA
+              </option>
+
+              <option value="10000 - 20000 DA">
+                10000 - 20000 DA
+              </option>
+
+              <option value="أكثر من 20000 DA">
+                أكثر من 20000 DA
+              </option>
+
+              <option value="لا أعرف">
+                لا أعرف
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="field">
+            <label>المدة</label>
+            <input id="orderDeadline">
+          </div>
+
+
+          <div class="field">
+            <label>Instagram</label>
+            <input id="orderInstagram">
+          </div>
+
+
+          <div class="field">
+            <label>موقع مرجعي</label>
+            <input id="orderReference" type="url">
+          </div>
+
+
+          <div class="field full">
+            <label>ملاحظات</label>
+
+            <textarea
+              id="orderNotes"
+              rows="4"
+            ></textarea>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <button
+        id="orderSubmit"
+        type="submit"
+        class="btn primary full"
+      >
+        إرسال الطلب 🚀
+      </button>
+
+
+      <div id="orderResult" class="result"></div>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
