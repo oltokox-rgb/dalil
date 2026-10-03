@@ -1,3 +1,8 @@
+/* =========================================================
+   SITE WEB — MAIN SCRIPT
+   Supabase + Languages + Navigation + Orders
+   ========================================================= */
+
 const SUPABASE_URL =
   "https://zpwxmpznlqprzcumuvkj.supabase.co";
 
@@ -9,6 +14,605 @@ const supabaseClient =
     SUPABASE_URL,
     SUPABASE_KEY
   );
+
+
+/* =========================================================
+   TRANSLATIONS
+   ========================================================= */
+
+const translations = {
+
+  ar: {
+
+    home: "الرئيسية",
+    about: "من أنا",
+    services: "الخدمات",
+    projects: "المشاريع",
+    contact: "تواصل",
+    more: "المزيد",
+    whatsapp: "WhatsApp",
+
+    orderWebsite: "اطلب موقعك",
+    orderNow: "اطلب موقعك الآن",
+    whatsappContact: "تواصل عبر WhatsApp",
+
+    statOne: "تصميم احترافي",
+    statTwo: "متجاوب",
+    statThree: "رابط خاص",
+
+    servicesTitle: "الخدمات",
+    servicesDescription:
+      "خدمات رقمية قابلة للتخصيص حسب مشروعك.",
+
+    projectsTitle: "المشاريع",
+    projectsDescription:
+      "نماذج من الأعمال والمواقع.",
+
+    ctaTitle:
+      "عندك فكرة لموقع؟",
+
+    ctaText:
+      "أرسل التفاصيل وسأشوف معك أفضل طريقة لتنفيذها.",
+
+    startNow:
+      "ابدأ الآن",
+
+    contactTitle:
+      "تواصل معي",
+
+    contactHeading:
+      "لنبني شيئًا مميزًا.",
+
+    name:
+      "الاسم",
+
+    phone:
+      "رقم الهاتف",
+
+    message:
+      "الرسالة",
+
+    namePlaceholder:
+      "اسمك",
+
+    messagePlaceholder:
+      "اكتب رسالتك...",
+
+    sendMessage:
+      "إرسال الرسالة",
+
+    rights:
+      "جميع الحقوق محفوظة.",
+
+    orderTitle:
+      "اطلب موقعك",
+
+    orderDescription:
+      "أرسل معلومات مشروعك وسأتواصل معك.",
+
+    yourInformation:
+      "معلوماتك",
+
+    fullName:
+      "الاسم الكامل *",
+
+    fullNamePlaceholder:
+      "الاسم الكامل",
+
+    phoneRequired:
+      "رقم الهاتف *",
+
+    projectInformation:
+      "معلومات المشروع",
+
+    projectName:
+      "اسم المشروع",
+
+    projectNamePlaceholder:
+      "اسم المشروع",
+
+    activity:
+      "نوع النشاط",
+
+    activityPlaceholder:
+      "ملابس، مطعم، خدمات...",
+
+    websiteType:
+      "نوع الموقع",
+
+    choose:
+      "اختر",
+
+    ecommerce:
+      "متجر إلكتروني",
+
+    customWebsite:
+      "موقع مخصص",
+
+    websiteIdea:
+      "فكرة الموقع *",
+
+    ideaPlaceholder:
+      "اشرح فكرتك بالتفصيل...",
+
+    websiteDetails:
+      "تفاصيل الموقع",
+
+    pages:
+      "الصفحات المطلوبة",
+
+    pagesPlaceholder:
+      "الرئيسية، المنتجات، من نحن...",
+
+    features:
+      "المزايا المطلوبة",
+
+    featuresPlaceholder:
+      "WhatsApp، Admin، طلبات، منتجات...",
+
+    budget:
+      "الميزانية",
+
+    budget1:
+      "أقل من 5000 DA",
+
+    budget4:
+      "أكثر من 20000 DA",
+
+    dontKnow:
+      "لا أعرف",
+
+    deadline:
+      "المدة",
+
+    deadlinePlaceholder:
+      "مثلاً: أسبوع",
+
+    reference:
+      "موقع مرجعي",
+
+    notes:
+      "ملاحظات",
+
+    notesPlaceholder:
+      "أي تفاصيل إضافية...",
+
+    sendOrder:
+      "إرسال الطلب",
+
+    loading:
+      "جاري التحميل...",
+
+    noServices:
+      "لا توجد خدمات مضافة حاليًا.",
+
+    noProjects:
+      "لا توجد مشاريع مضافة حاليًا.",
+
+    viewProject:
+      "مشاهدة المشروع ↗",
+
+    sending:
+      "جاري الإرسال...",
+
+    sendingOrder:
+      "جاري إرسال الطلب...",
+
+    messageSuccess:
+      "تم إرسال الرسالة بنجاح.",
+
+    messageError:
+      "حدث خطأ أثناء الإرسال.",
+
+    orderSuccess:
+      "تم إرسال طلبك بنجاح!",
+
+    orderError:
+      "حدث خطأ أثناء إرسال الطلب."
+
+  },
+
+
+  en: {
+
+    home: "Home",
+    about: "About",
+    services: "Services",
+    projects: "Projects",
+    contact: "Contact",
+    more: "More",
+    whatsapp: "WhatsApp",
+
+    orderWebsite: "Order a Website",
+    orderNow: "Order Your Website",
+    whatsappContact: "Contact via WhatsApp",
+
+    statOne: "Professional Design",
+    statTwo: "Responsive",
+    statThree: "Custom Link",
+
+    servicesTitle: "Services",
+    servicesDescription:
+      "Digital services customized for your project.",
+
+    projectsTitle: "Projects",
+    projectsDescription:
+      "Selected websites and digital projects.",
+
+    ctaTitle:
+      "Have a website idea?",
+
+    ctaText:
+      "Send the details and let's find the best way to build it.",
+
+    startNow:
+      "Start Now",
+
+    contactTitle:
+      "Get in Touch",
+
+    contactHeading:
+      "Let's build something remarkable.",
+
+    name:
+      "Name",
+
+    phone:
+      "Phone",
+
+    message:
+      "Message",
+
+    namePlaceholder:
+      "Your name",
+
+    messagePlaceholder:
+      "Write your message...",
+
+    sendMessage:
+      "Send Message",
+
+    rights:
+      "All rights reserved.",
+
+    orderTitle:
+      "Order Your Website",
+
+    orderDescription:
+      "Send your project information and I'll get back to you.",
+
+    yourInformation:
+      "Your Information",
+
+    fullName:
+      "Full Name *",
+
+    fullNamePlaceholder:
+      "Full name",
+
+    phoneRequired:
+      "Phone Number *",
+
+    projectInformation:
+      "Project Information",
+
+    projectName:
+      "Project Name",
+
+    projectNamePlaceholder:
+      "Project name",
+
+    activity:
+      "Business Type",
+
+    activityPlaceholder:
+      "Clothing, restaurant, services...",
+
+    websiteType:
+      "Website Type",
+
+    choose:
+      "Choose",
+
+    ecommerce:
+      "E-commerce",
+
+    customWebsite:
+      "Custom Website",
+
+    websiteIdea:
+      "Website Idea *",
+
+    ideaPlaceholder:
+      "Explain your idea in detail...",
+
+    websiteDetails:
+      "Website Details",
+
+    pages:
+      "Required Pages",
+
+    pagesPlaceholder:
+      "Home, products, about us...",
+
+    features:
+      "Required Features",
+
+    featuresPlaceholder:
+      "WhatsApp, Admin, Orders, Products...",
+
+    budget:
+      "Budget",
+
+    budget1:
+      "Less than 5000 DA",
+
+    budget4:
+      "More than 20000 DA",
+
+    dontKnow:
+      "I don't know",
+
+    deadline:
+      "Deadline",
+
+    deadlinePlaceholder:
+      "Example: One week",
+
+    reference:
+      "Reference Website",
+
+    notes:
+      "Notes",
+
+    notesPlaceholder:
+      "Any additional details...",
+
+    sendOrder:
+      "Send Request",
+
+    loading:
+      "Loading...",
+
+    noServices:
+      "No services available yet.",
+
+    noProjects:
+      "No projects available yet.",
+
+    viewProject:
+      "View Project ↗",
+
+    sending:
+      "Sending...",
+
+    sendingOrder:
+      "Sending request...",
+
+    messageSuccess:
+      "Message sent successfully.",
+
+    messageError:
+      "Something went wrong while sending.",
+
+    orderSuccess:
+      "Your request has been sent successfully!",
+
+    orderError:
+      "Something went wrong while sending your request."
+
+  },
+
+
+  fr: {
+
+    home: "Accueil",
+    about: "À propos",
+    services: "Services",
+    projects: "Projets",
+    contact: "Contact",
+    more: "Plus",
+    whatsapp: "WhatsApp",
+
+    orderWebsite: "Commander un site",
+    orderNow: "Commander votre site",
+    whatsappContact: "Contacter via WhatsApp",
+
+    statOne: "Design professionnel",
+    statTwo: "Responsive",
+    statThree: "Lien personnalisé",
+
+    servicesTitle: "Services",
+    servicesDescription:
+      "Des services digitaux adaptés à votre projet.",
+
+    projectsTitle: "Projets",
+    projectsDescription:
+      "Une sélection de sites et projets digitaux.",
+
+    ctaTitle:
+      "Vous avez une idée de site ?",
+
+    ctaText:
+      "Envoyez les détails et trouvons ensemble la meilleure solution.",
+
+    startNow:
+      "Commencer",
+
+    contactTitle:
+      "Me contacter",
+
+    contactHeading:
+      "Créons quelque chose de remarquable.",
+
+    name:
+      "Nom",
+
+    phone:
+      "Téléphone",
+
+    message:
+      "Message",
+
+    namePlaceholder:
+      "Votre nom",
+
+    messagePlaceholder:
+      "Écrivez votre message...",
+
+    sendMessage:
+      "Envoyer le message",
+
+    rights:
+      "Tous droits réservés.",
+
+    orderTitle:
+      "Commander votre site",
+
+    orderDescription:
+      "Envoyez les informations de votre projet et je vous contacterai.",
+
+    yourInformation:
+      "Vos informations",
+
+    fullName:
+      "Nom complet *",
+
+    fullNamePlaceholder:
+      "Nom complet",
+
+    phoneRequired:
+      "Numéro de téléphone *",
+
+    projectInformation:
+      "Informations du projet",
+
+    projectName:
+      "Nom du projet",
+
+    projectNamePlaceholder:
+      "Nom du projet",
+
+    activity:
+      "Type d'activité",
+
+    activityPlaceholder:
+      "Vêtements, restaurant, services...",
+
+    websiteType:
+      "Type de site",
+
+    choose:
+      "Choisir",
+
+    ecommerce:
+      "Boutique en ligne",
+
+    customWebsite:
+      "Site personnalisé",
+
+    websiteIdea:
+      "Idée du site *",
+
+    ideaPlaceholder:
+      "Expliquez votre idée en détail...",
+
+    websiteDetails:
+      "Détails du site",
+
+    pages:
+      "Pages souhaitées",
+
+    pagesPlaceholder:
+      "Accueil, produits, à propos...",
+
+    features:
+      "Fonctionnalités souhaitées",
+
+    featuresPlaceholder:
+      "WhatsApp, Admin, commandes, produits...",
+
+    budget:
+      "Budget",
+
+    budget1:
+      "Moins de 5000 DA",
+
+    budget4:
+      "Plus de 20000 DA",
+
+    dontKnow:
+      "Je ne sais pas",
+
+    deadline:
+      "Délai",
+
+    deadlinePlaceholder:
+      "Exemple : une semaine",
+
+    reference:
+      "Site de référence",
+
+    notes:
+      "Notes",
+
+    notesPlaceholder:
+      "Informations supplémentaires...",
+
+    sendOrder:
+      "Envoyer la demande",
+
+    loading:
+      "Chargement...",
+
+    noServices:
+      "Aucun service disponible pour le moment.",
+
+    noProjects:
+      "Aucun projet disponible pour le moment.",
+
+    viewProject:
+      "Voir le projet ↗",
+
+    sending:
+      "Envoi...",
+
+    sendingOrder:
+      "Envoi de la demande...",
+
+    messageSuccess:
+      "Message envoyé avec succès.",
+
+    messageError:
+      "Une erreur est survenue.",
+
+    orderSuccess:
+      "Votre demande a été envoyée avec succès !",
+
+    orderError:
+      "Une erreur est survenue lors de l'envoi."
+
+  }
+
+};
+
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+
+function t(key) {
+
+  const lang =
+    localStorage.getItem("site_language") || "ar";
+
+  return (
+    translations[lang]?.[key] ||
+    translations.ar[key] ||
+    key
+  );
+
+}
 
 
 function escapeHTML(value) {
@@ -26,6 +630,7 @@ function escapeHTML(value) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+
 }
 
 
@@ -36,27 +641,39 @@ function whatsappURL(phone) {
       .replace(/\D/g, "");
 
   if (value.startsWith("0")) {
-    value = "213" + value.slice(1);
+    value =
+      "213" +
+      value.slice(1);
   }
 
   if (!value.startsWith("213")) {
-    value = "213" + value;
+    value =
+      "213" +
+      value;
   }
 
   return `https://wa.me/${value}`;
+
 }
 
 
-function result(element, text, type = "") {
+function result(
+  element,
+  text,
+  type = ""
+) {
 
   element.textContent = text;
+
   element.className =
     `result ${type}`;
 
 }
 
 
-/* ELEMENTS */
+/* =========================================================
+   ELEMENTS
+   ========================================================= */
 
 const brandText =
   document.getElementById("brandText");
@@ -115,20 +732,189 @@ const servicesGrid =
 const projectsGrid =
   document.getElementById("projectsGrid");
 
-
-/* MOBILE MENU */
-
 const menuBtn =
   document.getElementById("menuBtn");
 
 const mobileMenu =
   document.getElementById("mobileMenu");
 
+const moreBtn =
+  document.getElementById("moreBtn");
+
+const moreMenu =
+  document.getElementById("moreMenu");
+
+const orderModal =
+  document.getElementById("orderModal");
+
+
+/* =========================================================
+   LANGUAGE SYSTEM
+   ========================================================= */
+
+function applyLanguage(lang) {
+
+  if (!translations[lang]) {
+    lang = "ar";
+  }
+
+  localStorage.setItem(
+    "site_language",
+    lang
+  );
+
+  document.documentElement.lang =
+    lang;
+
+  document.documentElement.dir =
+    lang === "ar"
+      ? "rtl"
+      : "ltr";
+
+
+  document
+    .querySelectorAll("[data-i18n]")
+    .forEach((element) => {
+
+      const key =
+        element.dataset.i18n;
+
+      if (
+        translations[lang] &&
+        translations[lang][key]
+      ) {
+
+        element.textContent =
+          translations[lang][key];
+
+      }
+
+    });
+
+
+  document
+    .querySelectorAll("[data-placeholder]")
+    .forEach((element) => {
+
+      const key =
+        element.dataset.placeholder;
+
+      if (
+        translations[lang] &&
+        translations[lang][key]
+      ) {
+
+        element.placeholder =
+          translations[lang][key];
+
+      }
+
+    });
+
+
+  document
+    .querySelectorAll(".language-btn")
+    .forEach((button) => {
+
+      button.classList.toggle(
+        "active",
+        button.dataset.lang === lang
+      );
+
+    });
+
+
+  document
+    .querySelectorAll("#orderWebsiteType option[data-i18n]")
+    .forEach((option) => {
+
+      const key =
+        option.dataset.i18n;
+
+      if (
+        translations[lang] &&
+        translations[lang][key]
+      ) {
+
+        option.textContent =
+          translations[lang][key];
+
+      }
+
+    });
+
+
+  document
+    .querySelectorAll("#orderBudget option[data-i18n]")
+    .forEach((option) => {
+
+      const key =
+        option.dataset.i18n;
+
+      if (
+        translations[lang] &&
+        translations[lang][key]
+      ) {
+
+        option.textContent =
+          translations[lang][key];
+
+      }
+
+    });
+
+
+  if (servicesGrid.dataset.loaded === "true") {
+    loadServices();
+  }
+
+  if (projectsGrid.dataset.loaded === "true") {
+    loadProjects();
+  }
+
+}
+
+
+document
+  .querySelectorAll(".language-btn")
+  .forEach((button) => {
+
+    button.addEventListener(
+      "click",
+      (event) => {
+
+        event.preventDefault();
+
+        applyLanguage(
+          button.dataset.lang
+        );
+
+        moreMenu.classList.remove(
+          "open"
+        );
+
+      }
+    );
+
+  });
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
 
 menuBtn.addEventListener(
   "click",
   () => {
-    mobileMenu.classList.toggle("open");
+
+    mobileMenu.classList.toggle(
+      "open"
+    );
+
+    menuBtn.classList.toggle(
+      "active"
+    );
+
   }
 );
 
@@ -142,16 +928,70 @@ document
     item.addEventListener(
       "click",
       () => {
-        mobileMenu.classList.remove(
-          "open"
-        );
+
+        if (
+          !item.classList.contains(
+            "language-btn"
+          )
+        ) {
+
+          mobileMenu.classList.remove(
+            "open"
+          );
+
+          menuBtn.classList.remove(
+            "active"
+          );
+
+        }
+
       }
     );
 
   });
 
 
-/* SETTINGS */
+/* =========================================================
+   MORE MENU
+   ========================================================= */
+
+moreBtn.addEventListener(
+  "click",
+  (event) => {
+
+    event.stopPropagation();
+
+    moreMenu.classList.toggle(
+      "open"
+    );
+
+  }
+);
+
+
+document.addEventListener(
+  "click",
+  (event) => {
+
+    if (
+      !event.target.closest(
+        ".more-wrapper"
+      )
+    ) {
+
+      moreMenu.classList.remove(
+        "open"
+      );
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   SETTINGS
+   ========================================================= */
 
 async function loadSettings() {
 
@@ -200,15 +1040,16 @@ async function loadSettings() {
 
   heroTitle.textContent =
     data.hero_title ||
-    "";
+    t("orderNow");
 
   heroDescription.textContent =
     data.hero_description ||
     "";
 
+
   aboutTitle.textContent =
     data.about_title ||
-    "من أنا";
+    t("about");
 
   aboutName.textContent =
     data.owner_name ||
@@ -292,7 +1133,7 @@ async function loadSettings() {
 
   contactInstagram.textContent =
     instagram
-      ? "فتح Instagram"
+      ? "Instagram ↗"
       : "Instagram";
 
   contactInstagram.href =
@@ -320,14 +1161,14 @@ async function loadSettings() {
     .setProperty(
       "--primary",
       data.primary_color ||
-      "#7c3aed"
+      "#8b5cf6"
     );
 
   document.documentElement.style
     .setProperty(
       "--secondary",
       data.secondary_color ||
-      "#06b6d4"
+      "#22d3ee"
     );
 
 
@@ -365,7 +1206,9 @@ async function loadSettings() {
 }
 
 
-/* SERVICES */
+/* =========================================================
+   SERVICES
+   ========================================================= */
 
 async function loadServices() {
 
@@ -401,9 +1244,16 @@ async function loadServices() {
       error
     );
 
+    servicesGrid.innerHTML =
+      `<div class="empty">${t("messageError")}</div>`;
+
     return;
 
   }
+
+
+  servicesGrid.dataset.loaded =
+    "true";
 
 
   if (
@@ -414,7 +1264,9 @@ async function loadServices() {
     servicesGrid.innerHTML =
       `
         <div class="empty">
-          لا توجد خدمات مضافة حاليًا.
+          ${escapeHTML(
+            t("noServices")
+          )}
         </div>
       `;
 
@@ -425,12 +1277,13 @@ async function loadServices() {
 
   servicesGrid.innerHTML =
     data
-      .map((item) => {
+      .map((item, index) => {
 
         const image =
           item.image_url
             ? `
               <img
+                class="service-image"
                 src="${escapeHTML(
                   item.image_url
                 )}"
@@ -443,27 +1296,32 @@ async function loadServices() {
 
 
         return `
-          <article class="service-card">
+          <article
+            class="service-card"
+            style="--delay:${index * 80}ms"
+          >
 
             ${image}
 
+            <div class="service-number">
+              0${index + 1}
+            </div>
+
             <div class="service-icon">
               ${escapeHTML(
-                item.icon ||
-                "💻"
+                item.icon || "✦"
               )}
             </div>
 
             <h3>
               ${escapeHTML(
-                item.title
+                item.title || ""
               )}
             </h3>
 
             <p>
               ${escapeHTML(
-                item.description ||
-                ""
+                item.description || ""
               )}
             </p>
 
@@ -479,6 +1337,10 @@ async function loadServices() {
                 : ""
             }
 
+            <div class="service-arrow">
+              ↗
+            </div>
+
           </article>
         `;
 
@@ -488,7 +1350,9 @@ async function loadServices() {
 }
 
 
-/* PROJECTS */
+/* =========================================================
+   PROJECTS
+   ========================================================= */
 
 async function loadProjects() {
 
@@ -524,9 +1388,16 @@ async function loadProjects() {
       error
     );
 
+    projectsGrid.innerHTML =
+      `<div class="empty">${t("messageError")}</div>`;
+
     return;
 
   }
+
+
+  projectsGrid.dataset.loaded =
+    "true";
 
 
   if (
@@ -537,7 +1408,9 @@ async function loadProjects() {
     projectsGrid.innerHTML =
       `
         <div class="empty">
-          لا توجد مشاريع مضافة حاليًا.
+          ${escapeHTML(
+            t("noProjects")
+          )}
         </div>
       `;
 
@@ -548,32 +1421,40 @@ async function loadProjects() {
 
   projectsGrid.innerHTML =
     data
-      .map((item) => {
+      .map((item, index) => {
 
         return `
-          <article class="project-card">
+          <article
+            class="project-card"
+            style="--delay:${index * 100}ms"
+          >
 
-            ${
-              item.image_url
-                ? `
-                  <img
-                    src="${escapeHTML(
-                      item.image_url
-                    )}"
-                    alt="${escapeHTML(
-                      item.title
-                    )}"
-                  >
-                `
-                : `
-                  <div
-                    style="
-                      height:280px;
-                      background:#0c1016;
-                    "
-                  ></div>
-                `
-            }
+            <div class="project-media">
+
+              ${
+                item.image_url
+                  ? `
+                    <img
+                      src="${escapeHTML(
+                        item.image_url
+                      )}"
+                      alt="${escapeHTML(
+                        item.title
+                      )}"
+                    >
+                  `
+                  : `
+                    <div class="project-placeholder">
+                      SITE WEB
+                    </div>
+                  `
+              }
+
+            </div>
+
+
+            <div class="project-shade"></div>
+
 
             <div class="project-content">
 
@@ -591,14 +1472,13 @@ async function loadProjects() {
 
               <h3>
                 ${escapeHTML(
-                  item.title
+                  item.title || ""
                 )}
               </h3>
 
               <p>
                 ${escapeHTML(
-                  item.description ||
-                  ""
+                  item.description || ""
                 )}
               </p>
 
@@ -613,7 +1493,9 @@ async function loadProjects() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      مشاهدة المشروع ↗
+                      ${escapeHTML(
+                        t("viewProject")
+                      )}
                     </a>
                   `
                   : ""
@@ -630,7 +1512,9 @@ async function loadProjects() {
 }
 
 
-/* CONTACT */
+/* =========================================================
+   CONTACT FORM
+   ========================================================= */
 
 document
   .getElementById("contactForm")
@@ -654,8 +1538,8 @@ document
 
       button.disabled = true;
 
-      button.textContent =
-        "جاري الإرسال...";
+      button.querySelector("span").textContent =
+        t("sending");
 
 
       const payload = {
@@ -710,8 +1594,8 @@ document
 
       button.disabled = false;
 
-      button.textContent =
-        "إرسال الرسالة";
+      button.querySelector("span").textContent =
+        t("sendMessage");
 
 
       if (error) {
@@ -720,7 +1604,7 @@ document
 
         result(
           output,
-          "حدث خطأ أثناء الإرسال.",
+          t("messageError"),
           "error"
         );
 
@@ -731,7 +1615,7 @@ document
 
       result(
         output,
-        "✅ تم إرسال الرسالة بنجاح.",
+        `✓ ${t("messageSuccess")}`,
         "success"
       );
 
@@ -742,30 +1626,61 @@ document
   );
 
 
-/* ORDER MODAL */
+/* =========================================================
+   ORDER MODAL
+   ========================================================= */
 
-const orderModal =
-  document.getElementById(
-    "orderModal"
-  );
+/* FORCE CLOSED ON LOAD */
 
+orderModal.classList.add(
+  "hidden"
+);
+
+orderModal.setAttribute(
+  "aria-hidden",
+  "true"
+);
+
+document.body.classList.remove(
+  "locked"
+);
+
+
+/* OPEN */
 
 document
-  .querySelectorAll(
-    ".order-open"
-  )
+  .querySelectorAll(".order-open")
   .forEach((button) => {
 
     button.addEventListener(
       "click",
-      () => {
+      (event) => {
+
+        event.preventDefault();
 
         orderModal.classList.remove(
           "hidden"
         );
 
+        orderModal.setAttribute(
+          "aria-hidden",
+          "false"
+        );
+
         document.body.classList.add(
           "locked"
+        );
+
+        mobileMenu.classList.remove(
+          "open"
+        );
+
+        menuBtn.classList.remove(
+          "active"
+        );
+
+        moreMenu.classList.remove(
+          "open"
         );
 
       }
@@ -774,25 +1689,78 @@ document
   });
 
 
+/* CLOSE */
+
+function closeOrderModal() {
+
+  orderModal.classList.add(
+    "hidden"
+  );
+
+  orderModal.setAttribute(
+    "aria-hidden",
+    "true"
+  );
+
+  document.body.classList.remove(
+    "locked"
+  );
+
+}
+
+
 document
   .getElementById(
     "closeOrderModal"
   )
   .addEventListener(
     "click",
-    () => {
-
-      orderModal.classList.add(
-        "hidden"
-      );
-
-      document.body.classList.remove(
-        "locked"
-      );
-
-    }
+    closeOrderModal
   );
 
+
+/* CLOSE BY CLICKING BACKGROUND */
+
+orderModal.addEventListener(
+  "click",
+  (event) => {
+
+    if (
+      event.target === orderModal
+    ) {
+
+      closeOrderModal();
+
+    }
+
+  }
+);
+
+
+/* CLOSE WITH ESC */
+
+document.addEventListener(
+  "keydown",
+  (event) => {
+
+    if (
+      event.key === "Escape" &&
+      !orderModal.classList.contains(
+        "hidden"
+      )
+    ) {
+
+      closeOrderModal();
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   ORDER FORM
+   ========================================================= */
 
 document
   .getElementById(
@@ -818,8 +1786,8 @@ document
 
       button.disabled = true;
 
-      button.textContent =
-        "جاري إرسال الطلب...";
+      button.querySelector("span").textContent =
+        t("sendingOrder");
 
 
       const payload = {
@@ -912,8 +1880,8 @@ document
 
       button.disabled = false;
 
-      button.textContent =
-        "إرسال الطلب 🚀";
+      button.querySelector("span").textContent =
+        t("sendOrder");
 
 
       if (error) {
@@ -922,7 +1890,7 @@ document
 
         result(
           output,
-          "حدث خطأ أثناء إرسال الطلب.",
+          t("orderError"),
           "error"
         );
 
@@ -933,7 +1901,7 @@ document
 
       result(
         output,
-        "✅ تم إرسال طلبك بنجاح!",
+        `✓ ${t("orderSuccess")}`,
         "success"
       );
 
@@ -944,13 +1912,26 @@ document
   );
 
 
-/* START */
+/* =========================================================
+   START
+   ========================================================= */
 
 document.getElementById(
   "year"
 ).textContent =
   new Date().getFullYear();
 
+
+/* DEFAULT LANGUAGE */
+
+applyLanguage(
+  localStorage.getItem(
+    "site_language"
+  ) || "ar"
+);
+
+
+/* LOAD DATA */
 
 Promise.all([
   loadSettings(),
