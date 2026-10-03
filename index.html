@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   >
 
@@ -26,61 +26,158 @@
 
   <div class="container nav">
 
-    <a href="#home" class="brand" id="brandLink">
+    <a href="#home" class="brand">
       <img id="brandLogo" class="brand-logo hidden" alt="">
       <span id="brandText">SITE WEB</span>
     </a>
 
     <nav class="nav-links">
-      <a href="#home">الرئيسية</a>
-      <a href="#about">من أنا</a>
-      <a href="#services">الخدمات</a>
-      <a href="#projects">المشاريع</a>
-      <a href="#contact">تواصل</a>
+      <a href="#home" data-i18n="home">الرئيسية</a>
+      <a href="#about" data-i18n="about">من أنا</a>
+      <a href="#services" data-i18n="services">الخدمات</a>
+      <a href="#projects" data-i18n="projects">المشاريع</a>
+      <a href="#contact" data-i18n="contact">تواصل</a>
     </nav>
 
-    <div class="nav-actions">
+    <div class="nav-tools">
 
-      <a
-        id="headerWhatsapp"
-        href="#"
-        class="whatsapp"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        WhatsApp
-      </a>
+      <!-- LANGUAGES -->
 
-      <button class="order-btn order-open">
-        اطلب موقعك
-      </button>
+      <div class="language-switcher">
+
+        <button
+          class="language-btn active"
+          data-lang="ar"
+        >
+          AR
+        </button>
+
+        <button
+          class="language-btn"
+          data-lang="en"
+        >
+          EN
+        </button>
+
+        <button
+          class="language-btn"
+          data-lang="fr"
+        >
+          FR
+        </button>
+
+      </div>
+
+
+      <!-- MORE -->
+
+      <div class="more-wrapper">
+
+        <button
+          id="moreBtn"
+          class="more-btn"
+          type="button"
+        >
+          <span data-i18n="more">المزيد</span>
+          <span class="more-arrow">⌄</span>
+        </button>
+
+        <div id="moreMenu" class="more-menu">
+
+          <a href="#about" data-i18n="about">من أنا</a>
+
+          <a href="#services" data-i18n="services">
+            الخدمات
+          </a>
+
+          <a href="#projects" data-i18n="projects">
+            المشاريع
+          </a>
+
+          <a href="#contact" data-i18n="contact">
+            تواصل
+          </a>
+
+          <button
+            class="more-order order-open"
+            type="button"
+            data-i18n="orderWebsite"
+          >
+            اطلب موقعك
+          </button>
+
+        </div>
+
+      </div>
 
     </div>
 
-    <button id="menuBtn" class="menu-btn">
+
+    <button
+      id="menuBtn"
+      class="menu-btn"
+      type="button"
+      aria-label="Menu"
+    >
       ☰
     </button>
 
   </div>
 
+
+  <!-- MOBILE MENU -->
+
   <div id="mobileMenu" class="mobile-menu">
 
-    <a href="#home">الرئيسية</a>
-    <a href="#about">من أنا</a>
-    <a href="#services">الخدمات</a>
-    <a href="#projects">المشاريع</a>
-    <a href="#contact">تواصل</a>
+    <div class="mobile-languages">
+
+      <button data-lang="ar" class="language-btn active">
+        AR
+      </button>
+
+      <button data-lang="en" class="language-btn">
+        EN
+      </button>
+
+      <button data-lang="fr" class="language-btn">
+        FR
+      </button>
+
+    </div>
+
+    <a href="#home" data-i18n="home">الرئيسية</a>
+
+    <a href="#about" data-i18n="about">
+      من أنا
+    </a>
+
+    <a href="#services" data-i18n="services">
+      الخدمات
+    </a>
+
+    <a href="#projects" data-i18n="projects">
+      المشاريع
+    </a>
+
+    <a href="#contact" data-i18n="contact">
+      تواصل
+    </a>
 
     <a
       id="mobileWhatsapp"
       href="#"
       target="_blank"
       rel="noopener noreferrer"
+      data-i18n="whatsapp"
     >
       WhatsApp
     </a>
 
-    <button class="order-open">
+    <button
+      class="mobile-order order-open"
+      type="button"
+      data-i18n="orderWebsite"
+    >
       اطلب موقعك
     </button>
 
@@ -91,16 +188,22 @@
 
 <main>
 
+  <!-- HERO -->
+
   <section id="home" class="hero">
 
-    <div class="hero-glow glow-a"></div>
-    <div class="hero-glow glow-b"></div>
+    <div class="hero-orb orb-one"></div>
+    <div class="hero-orb orb-two"></div>
+    <div class="hero-orb orb-three"></div>
+
+    <div class="hero-lines"></div>
 
     <div class="container hero-grid">
 
       <div class="hero-copy">
 
         <span class="eyebrow">
+          <span class="eyebrow-dot"></span>
           WEB DEVELOPMENT
         </span>
 
@@ -112,12 +215,20 @@
           مواقع ويب احترافية وسريعة ومتجاوبة مع الهاتف والكمبيوتر.
         </p>
 
+
         <div class="hero-actions">
 
-          <button class="btn primary order-open">
-            اطلب موقعك الآن
-            <span>↗</span>
+          <button
+            class="btn primary order-open"
+            type="button"
+          >
+            <span data-i18n="orderNow">
+              اطلب موقعك الآن
+            </span>
+
+            <span class="btn-arrow">↗</span>
           </button>
+
 
           <a
             id="heroWhatsapp"
@@ -126,26 +237,37 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            تواصل عبر WhatsApp
+            <span data-i18n="whatsappContact">
+              تواصل عبر WhatsApp
+            </span>
+
+            <span>↗</span>
           </a>
 
         </div>
+
 
         <div class="mini-stats">
 
           <div>
             <strong>01</strong>
-            <span>تصميم احترافي</span>
+            <span data-i18n="statOne">
+              تصميم احترافي
+            </span>
           </div>
 
           <div>
             <strong>02</strong>
-            <span>متجاوب</span>
+            <span data-i18n="statTwo">
+              متجاوب
+            </span>
           </div>
 
           <div>
             <strong>03</strong>
-            <span>رابط خاص</span>
+            <span data-i18n="statThree">
+              رابط خاص
+            </span>
           </div>
 
         </div>
@@ -153,7 +275,20 @@
       </div>
 
 
+      <!-- WEBSITE PREVIEW -->
+
       <div class="hero-preview">
+
+        <div class="floating-label label-one">
+          <span></span>
+          <b>FAST</b>
+        </div>
+
+        <div class="floating-label label-two">
+          <span></span>
+          <b>RESPONSIVE</b>
+        </div>
+
 
         <div class="preview-window">
 
@@ -171,20 +306,25 @@
 
           </div>
 
+
           <div class="preview-body">
 
-            <div class="preview-badge"></div>
+            <div class="preview-badge">
+              DIGITAL EXPERIENCE
+            </div>
 
-            <div class="preview-heading">
+            <div class="preview-title-lines">
               <span></span>
               <span></span>
               <span></span>
             </div>
 
             <div class="preview-grid">
+
               <div></div>
               <div></div>
               <div></div>
+
             </div>
 
             <div class="preview-button"></div>
@@ -200,13 +340,17 @@
   </section>
 
 
+  <!-- ABOUT -->
+
   <section id="about" class="section dark-section">
 
     <div class="container">
 
       <div class="section-title">
 
-        <span class="eyebrow">ABOUT</span>
+        <span class="eyebrow">
+          ABOUT
+        </span>
 
         <h2 id="aboutTitle">
           من أنا
@@ -218,6 +362,8 @@
       <div class="about-grid">
 
         <div class="profile-wrap">
+
+          <div class="profile-ring"></div>
 
           <div class="profile-glow"></div>
 
@@ -231,6 +377,10 @@
 
 
         <div class="about-copy">
+
+          <span class="about-number">
+            01 / PROFILE
+          </span>
 
           <h3 id="aboutName">
             Djalil
@@ -268,24 +418,33 @@
   </section>
 
 
+  <!-- SERVICES -->
+
   <section id="services" class="section">
 
     <div class="container">
 
       <div class="section-title center">
 
-        <span class="eyebrow">SERVICES</span>
+        <span class="eyebrow">
+          SERVICES
+        </span>
 
-        <h2>الخدمات</h2>
+        <h2 data-i18n="servicesTitle">
+          الخدمات
+        </h2>
 
-        <p>
+        <p data-i18n="servicesDescription">
           خدمات رقمية قابلة للتخصيص حسب مشروعك.
         </p>
 
       </div>
 
 
-      <div id="servicesGrid" class="services-grid">
+      <div
+        id="servicesGrid"
+        class="services-grid"
+      >
         <div class="loading">
           جاري التحميل...
         </div>
@@ -295,6 +454,8 @@
 
   </section>
 
+
+  <!-- PROJECTS -->
 
   <section id="projects" class="section dark-section">
 
@@ -302,18 +463,25 @@
 
       <div class="section-title center">
 
-        <span class="eyebrow">PORTFOLIO</span>
+        <span class="eyebrow">
+          PORTFOLIO
+        </span>
 
-        <h2>المشاريع</h2>
+        <h2 data-i18n="projectsTitle">
+          المشاريع
+        </h2>
 
-        <p>
+        <p data-i18n="projectsDescription">
           نماذج من الأعمال والمواقع.
         </p>
 
       </div>
 
 
-      <div id="projectsGrid" class="projects-grid">
+      <div
+        id="projectsGrid"
+        class="projects-grid"
+      >
         <div class="loading">
           جاري التحميل...
         </div>
@@ -324,32 +492,42 @@
   </section>
 
 
+  <!-- CTA -->
+
   <section class="cta-section">
 
     <div class="container">
 
       <div class="cta-box">
 
-        <div>
+        <div class="cta-glow"></div>
+
+        <div class="cta-content">
 
           <span class="eyebrow">
             START PROJECT
           </span>
 
-          <h2>
+          <h2 data-i18n="ctaTitle">
             عندك فكرة لموقع؟
           </h2>
 
-          <p>
+          <p data-i18n="ctaText">
             أرسل التفاصيل وسأشوف معك أفضل طريقة لتنفيذها.
           </p>
 
-        </div>
+          <button
+            class="btn primary order-open"
+            type="button"
+          >
+            <span data-i18n="startNow">
+              ابدأ الآن
+            </span>
 
-        <button class="btn primary order-open">
-          ابدأ الآن
-          <span>↗</span>
-        </button>
+            <span>↗</span>
+          </button>
+
+        </div>
 
       </div>
 
@@ -358,15 +536,21 @@
   </section>
 
 
+  <!-- CONTACT -->
+
   <section id="contact" class="section">
 
     <div class="container">
 
       <div class="section-title center">
 
-        <span class="eyebrow">CONTACT</span>
+        <span class="eyebrow">
+          CONTACT
+        </span>
 
-        <h2>تواصل معي</h2>
+        <h2 data-i18n="contactTitle">
+          تواصل معي
+        </h2>
 
       </div>
 
@@ -375,8 +559,22 @@
 
         <div class="contact-card">
 
+          <div class="contact-card-top">
+            <span class="contact-label">
+              GET IN TOUCH
+            </span>
+
+            <h3 data-i18n="contactHeading">
+              لنبني شيئًا مميزًا.
+            </h3>
+          </div>
+
+
           <div class="contact-line">
-            <div>📱</div>
+
+            <div class="contact-icon">
+              ✦
+            </div>
 
             <div>
               <span>WhatsApp</span>
@@ -390,24 +588,35 @@
                 0782106656
               </a>
             </div>
+
           </div>
 
 
           <div class="contact-line">
-            <div>✉️</div>
+
+            <div class="contact-icon">
+              @
+            </div>
 
             <div>
               <span>Email</span>
 
-              <a id="contactEmail" href="#">
+              <a
+                id="contactEmail"
+                href="#"
+              >
                 ardjoundjalil8@gmail.com
               </a>
             </div>
+
           </div>
 
 
           <div class="contact-line">
-            <div>📸</div>
+
+            <div class="contact-icon">
+              ◎
+            </div>
 
             <div>
               <span>Instagram</span>
@@ -421,42 +630,82 @@
                 Instagram
               </a>
             </div>
+
           </div>
 
         </div>
 
 
-        <form id="contactForm" class="contact-form">
+        <form
+          id="contactForm"
+          class="contact-form"
+        >
 
           <div class="form-row">
 
             <div class="field">
-              <label>الاسم</label>
-              <input id="clientName" required>
+
+              <label data-i18n="name">
+                الاسم
+              </label>
+
+              <input
+                id="clientName"
+                required
+                data-placeholder="namePlaceholder"
+                placeholder="اسمك"
+              >
+
             </div>
+
 
             <div class="field">
-              <label>رقم الهاتف</label>
-              <input id="clientPhone" type="tel" required>
+
+              <label data-i18n="phone">
+                رقم الهاتف
+              </label>
+
+              <input
+                id="clientPhone"
+                type="tel"
+                required
+                placeholder="07..."
+              >
+
             </div>
 
           </div>
 
 
           <div class="field">
-            <label>Email</label>
-            <input id="clientEmail" type="email">
+
+            <label>
+              Email
+            </label>
+
+            <input
+              id="clientEmail"
+              type="email"
+              placeholder="example@email.com"
+            >
+
           </div>
 
 
           <div class="field">
-            <label>الرسالة</label>
+
+            <label data-i18n="message">
+              الرسالة
+            </label>
 
             <textarea
               id="clientMessage"
               rows="6"
               required
+              data-placeholder="messagePlaceholder"
+              placeholder="اكتب رسالتك..."
             ></textarea>
+
           </div>
 
 
@@ -465,11 +714,18 @@
             class="btn primary full"
             type="submit"
           >
-            إرسال الرسالة
+            <span data-i18n="sendMessage">
+              إرسال الرسالة
+            </span>
+
+            <span>↗</span>
           </button>
 
 
-          <div id="contactResult" class="result"></div>
+          <div
+            id="contactResult"
+            class="result"
+          ></div>
 
         </form>
 
@@ -482,23 +738,37 @@
 </main>
 
 
+<!-- FOOTER -->
+
 <footer class="footer">
 
   <div class="container footer-inner">
 
     <div>
+
       <strong id="footerName">
         SITE WEB
       </strong>
 
       <p>
         © <span id="year"></span>
-        جميع الحقوق محفوظة.
+        <span data-i18n="rights">
+          جميع الحقوق محفوظة.
+        </span>
       </p>
+
     </div>
 
-    <button class="order-open footer-order">
-      اطلب موقعك
+
+    <button
+      class="order-open footer-order"
+      type="button"
+    >
+      <span data-i18n="orderWebsite">
+        اطلب موقعك
+      </span>
+
+      <span>↗</span>
     </button>
 
   </div>
@@ -508,11 +778,19 @@
 
 <!-- ORDER MODAL -->
 
-<div id="orderModal" class="modal hidden">
+<div
+  id="orderModal"
+  class="modal hidden"
+  aria-hidden="true"
+>
 
   <div class="modal-box order-modal">
 
-    <button id="closeOrderModal" class="modal-close">
+    <button
+      id="closeOrderModal"
+      class="modal-close"
+      type="button"
+    >
       ×
     </button>
 
@@ -523,12 +801,12 @@
         START YOUR PROJECT
       </span>
 
-      <h2>
+      <h2 data-i18n="orderTitle">
         اطلب موقعك
       </h2>
 
-      <p>
-        كل المعلومات التي ترسلها ستظهر عندي مباشرة في لوحة الإدارة.
+      <p data-i18n="orderDescription">
+        أرسل معلومات مشروعك وسأتواصل معك.
       </p>
 
     </div>
@@ -536,25 +814,60 @@
 
     <form id="orderForm">
 
+      <!-- YOUR INFORMATION -->
+
       <div class="order-section">
 
-        <h3>معلوماتك</h3>
+        <h3 data-i18n="yourInformation">
+          معلوماتك
+        </h3>
 
         <div class="form-grid">
 
           <div class="field">
-            <label>الاسم الكامل *</label>
-            <input id="orderName" required>
+
+            <label data-i18n="fullName">
+              الاسم الكامل *
+            </label>
+
+            <input
+              id="orderName"
+              required
+              data-placeholder="fullNamePlaceholder"
+              placeholder="الاسم الكامل"
+            >
+
           </div>
+
 
           <div class="field">
-            <label>رقم الهاتف *</label>
-            <input id="orderPhone" type="tel" required>
+
+            <label data-i18n="phoneRequired">
+              رقم الهاتف *
+            </label>
+
+            <input
+              id="orderPhone"
+              type="tel"
+              required
+              placeholder="07..."
+            >
+
           </div>
 
+
           <div class="field full">
-            <label>Email</label>
-            <input id="orderEmail" type="email">
+
+            <label>
+              Email
+            </label>
+
+            <input
+              id="orderEmail"
+              type="email"
+              placeholder="example@email.com"
+            >
+
           </div>
 
         </div>
@@ -562,47 +875,94 @@
       </div>
 
 
+      <!-- PROJECT -->
+
       <div class="order-section">
 
-        <h3>معلومات المشروع</h3>
+        <h3 data-i18n="projectInformation">
+          معلومات المشروع
+        </h3>
 
         <div class="form-grid">
 
           <div class="field">
-            <label>اسم المشروع</label>
-            <input id="orderBusiness">
+
+            <label data-i18n="projectName">
+              اسم المشروع
+            </label>
+
+            <input
+              id="orderBusiness"
+              data-placeholder="projectNamePlaceholder"
+              placeholder="اسم المشروع"
+            >
+
           </div>
+
 
           <div class="field">
-            <label>نوع النشاط</label>
+
+            <label data-i18n="activity">
+              نوع النشاط
+            </label>
+
             <input
               id="orderBusinessType"
+              data-placeholder="activityPlaceholder"
               placeholder="ملابس، مطعم، خدمات..."
             >
+
           </div>
 
+
           <div class="field full">
-            <label>نوع الموقع</label>
+
+            <label data-i18n="websiteType">
+              نوع الموقع
+            </label>
 
             <select id="orderWebsiteType">
-              <option value="">اختر</option>
-              <option value="Landing Page">Landing Page</option>
-              <option value="Site vitrine">Site vitrine</option>
-              <option value="Portfolio">Portfolio</option>
-              <option value="E-commerce">متجر إلكتروني</option>
-              <option value="Custom">موقع مخصص</option>
+
+              <option value="" data-i18n="choose">
+                اختر
+              </option>
+
+              <option value="Landing Page">
+                Landing Page
+              </option>
+
+              <option value="Site vitrine">
+                Site vitrine
+              </option>
+
+              <option value="Portfolio">
+                Portfolio
+              </option>
+
+              <option value="E-commerce" data-i18n="ecommerce">
+                متجر إلكتروني
+              </option>
+
+              <option value="Custom" data-i18n="customWebsite">
+                موقع مخصص
+              </option>
+
             </select>
 
           </div>
 
+
           <div class="field full">
 
-            <label>فكرة الموقع *</label>
+            <label data-i18n="websiteIdea">
+              فكرة الموقع *
+            </label>
 
             <textarea
               id="orderIdea"
               rows="7"
               required
+              data-placeholder="ideaPlaceholder"
               placeholder="اشرح فكرتك بالتفصيل..."
             ></textarea>
 
@@ -613,29 +973,41 @@
       </div>
 
 
+      <!-- DETAILS -->
+
       <div class="order-section">
 
-        <h3>تفاصيل الموقع</h3>
+        <h3 data-i18n="websiteDetails">
+          تفاصيل الموقع
+        </h3>
 
         <div class="form-grid">
 
           <div class="field full">
-            <label>الصفحات المطلوبة</label>
+
+            <label data-i18n="pages">
+              الصفحات المطلوبة
+            </label>
 
             <input
               id="orderPages"
+              data-placeholder="pagesPlaceholder"
               placeholder="الرئيسية، المنتجات، من نحن..."
             >
+
           </div>
 
 
           <div class="field full">
 
-            <label>المزايا المطلوبة</label>
+            <label data-i18n="features">
+              المزايا المطلوبة
+            </label>
 
             <textarea
               id="orderFeatures"
               rows="5"
+              data-placeholder="featuresPlaceholder"
               placeholder="WhatsApp، Admin، طلبات، منتجات..."
             ></textarea>
 
@@ -643,13 +1015,18 @@
 
 
           <div class="field">
-            <label>الميزانية</label>
+
+            <label data-i18n="budget">
+              الميزانية
+            </label>
 
             <select id="orderBudget">
 
-              <option value="">اختر</option>
+              <option value="" data-i18n="choose">
+                اختر
+              </option>
 
-              <option value="أقل من 5000 DA">
+              <option value="أقل من 5000 DA" data-i18n="budget1">
                 أقل من 5000 DA
               </option>
 
@@ -661,11 +1038,11 @@
                 10000 - 20000 DA
               </option>
 
-              <option value="أكثر من 20000 DA">
+              <option value="أكثر من 20000 DA" data-i18n="budget4">
                 أكثر من 20000 DA
               </option>
 
-              <option value="لا أعرف">
+              <option value="لا أعرف" data-i18n="dontKnow">
                 لا أعرف
               </option>
 
@@ -675,30 +1052,62 @@
 
 
           <div class="field">
-            <label>المدة</label>
-            <input id="orderDeadline">
+
+            <label data-i18n="deadline">
+              المدة
+            </label>
+
+            <input
+              id="orderDeadline"
+              data-placeholder="deadlinePlaceholder"
+              placeholder="مثلاً: أسبوع"
+            >
+
           </div>
 
 
           <div class="field">
-            <label>Instagram</label>
-            <input id="orderInstagram">
+
+            <label>
+              Instagram
+            </label>
+
+            <input
+              id="orderInstagram"
+              placeholder="@username"
+            >
+
           </div>
 
 
           <div class="field">
-            <label>موقع مرجعي</label>
-            <input id="orderReference" type="url">
+
+            <label data-i18n="reference">
+              موقع مرجعي
+            </label>
+
+            <input
+              id="orderReference"
+              type="url"
+              placeholder="https://..."
+            >
+
           </div>
 
 
           <div class="field full">
-            <label>ملاحظات</label>
+
+            <label data-i18n="notes">
+              ملاحظات
+            </label>
 
             <textarea
               id="orderNotes"
               rows="4"
+              data-placeholder="notesPlaceholder"
+              placeholder="أي تفاصيل إضافية..."
             ></textarea>
+
           </div>
 
         </div>
@@ -711,11 +1120,18 @@
         type="submit"
         class="btn primary full"
       >
-        إرسال الطلب 🚀
+        <span data-i18n="sendOrder">
+          إرسال الطلب
+        </span>
+
+        <span>🚀</span>
       </button>
 
 
-      <div id="orderResult" class="result"></div>
+      <div
+        id="orderResult"
+        class="result"
+      ></div>
 
     </form>
 
